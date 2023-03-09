@@ -1,0 +1,15 @@
+package pro.sky.lesson31skypro.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+public class FileProcessingException extends RuntimeException {
+    public FileProcessingException() {
+        super(("Проблемы чтения файла."));
+    }
+
+    public FileProcessingException(String message) {
+        super(message);
+    }
+}
